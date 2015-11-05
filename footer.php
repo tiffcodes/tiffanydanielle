@@ -1,6 +1,28 @@
 		<footer class='contact'>
-			<div class='container'>
-				<div class='social'>
+			<h3>Contact</h3>
+			<div class='container flexbox'>
+
+			<!-- CONTACT SECTION -->
+
+				<div class="contactInfo">
+					<a href='mailto:hello@tiffanydanielle.ca'>
+						<h4>hello@tiffanydanielle.ca</h4>
+					</a>
+					<a href='#'>
+						<h4>416-389-8787</h4>
+					</a>
+				</div> <!-- /contactInfo -->
+
+				
+			<!-- FORM SECTION -->
+
+		        <div class="form">
+		        	
+		        </div> <!-- /form -->
+		    </div> <!--  /container /flexbox -->
+		    <!-- SOCIAL SECTION -->
+		    <div class="container">
+		        <div class='social'>
 					<?php
 
 					$contactInfo = new WP_Query(
@@ -16,7 +38,7 @@
 						<?php while ($contactInfo->have_posts()) : $contactInfo->the_post(); ?>
 
 							<section id="<?php echo $post->post_name; ?>">
-								<a href='mailto:<?php the_field('email'); ?>'><i class='fa fa-envelope'></i></a>
+								<a href='mailto: <?php the_field('email'); ?>'><i class='fa fa-envelope'></i></a>
 							    <a href='<?php the_field('phone'); ?>'><i class='fa fa-phone'></i></a>
 							   	<a href='<?php the_field('linkedin'); ?>'><i class='fa fa-linkedin'></i></a>
 							    <a href='<?php the_field('github'); ?>'><i class='fa fa-github'></i></a>

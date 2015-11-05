@@ -115,9 +115,10 @@ body {
 
 
 h3 {
+	color: black;
 	font-weight: 800;
 	text-transform: uppercase;
-	@include fontSize(18);
+	@include fontSize(22);
 	text-align: center;
 	padding: 50px 0;
 	letter-spacing: 1px;
@@ -127,7 +128,7 @@ h3 {
 		height: 1px;
 		width: 50px;
 		display: block;
-		margin: 0 51% 10px 38.5%;
+		margin: 0 51% 10px 35.2%;
 	}
 }
 
@@ -142,27 +143,38 @@ h3 {
 	flex-direction: row;
 	flex-wrap: wrap;
 	justify-content: space-around;
+	.tech {
+		margin-bottom: 30px;
+	}
 	i {
 		// align-self: auto;
-		flex: 1 0 auto;
 		text-align: center;
-		margin: 8px 40px;
+		margin: 8px 30px;
 		padding: 10px;			
-		@include fontSize(15);
-		background-color: $bluegrey;
-		border-radius: 50%;
+		@include fontSize(30);
+		color: $blue;
+		// border-radius: 50%;
+	}
+	p {
+		@include fontSize(8);
+		text-align: center;
+		letter-spacing: 1.5px;
+		font-weight: 800;
+	}
+	.skill {
+		flex: 1 0 auto;
 	}
 }
 
 .aboutMe {
-	margin: 50px 0 20px;
+	margin: 20px 0 20px;
 	.short {
 		text-align: right;
 		font-weight: 800;
 		float: left;
 		width: 37%;
 		margin: 0 3% 0 0;
-		@include fontSize(10);
+		@include fontSize(12);
 	}
 	.long {
 		float: left;
@@ -173,6 +185,7 @@ h3 {
 		color: $grey;
 	}
 }
+
 .resumeButton {
 	background-color: $blue;
 	box-shadow: 2px 2px darken($blue, 20%);
@@ -190,16 +203,89 @@ h3 {
 // PORTFOLIO SECTION
 
 section.portfolio {
-	background-color: $orange;
+	background-color: $grey;
 	padding-top: 10px;
 	h3 {
 		padding: 60px 0;
 		color: white;
 		&:before {
-			margin: 0 51% 10px 42.5%;
+			margin: 0 51% 10px 34%;
 			background-color: white;
 		}
 	}
+	.projects {
+		color: white;
+		display: flex;
+		flex-wrap: wrap;
+		flex-direction: row;
+		.projectPhoto {
+			flex: 1 0 60%;
+			position: relative;
+			.view {
+				position: absolute;
+				bottom: 0;
+				right: 0;
+				background-color: $blue;
+				@include fontSize(10);
+				font-weight: 800;
+				width: 30%;
+				p {
+					float: left;
+					width: 85%;
+				}
+				i {
+					@include fontSize(14);
+				}
+			}
+		}
+		.projectInfo {
+			padding-top: 30px;
+			flex: 1 0 40%;
+			p {
+				@include fontSize(9);
+			}
+			.techUsed {
+				float: left;
+				
+				@include fontSize(8);
+				font-weight: 800;
+			}
+		}
+	}
 }	
+
+
+// FOOTER
+footer {
+	h3 {
+		padding: 60px 0;
+		&:before {
+			margin: 0 51% 10px 44%;
+		}
+	}
+}
+
+.flexbox {
+	display: flex;
+	flex-wrap: wrap;
+	flex-direction: row;
+	& > * {
+		flex: 1 0 50%;
+	}
+}
+
+.contactInfo {
+	text-align: right;
+}
+
+.social {
+	padding: 10% 0 5%;
+	text-align: center;
+	a {
+		padding: 0 10px;
+	}
+}
+
+
 
 
