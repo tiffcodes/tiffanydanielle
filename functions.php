@@ -266,3 +266,6 @@ function get_post_parent($post) {
 		return $post->ID;
 	}
 }
+
+
+show_admin_bar(false);

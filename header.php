@@ -7,6 +7,8 @@
   <title><?php  wp_title('|', true, 'right'); ?></title>
   <link rel="pingback" href="<?php bloginfo( 'pingback_url' ); ?>" />
   
+  <link href='//cdn.jsdelivr.net/devicons/1.8.0/css/devicons.min.css' rel='stylesheet'>
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css">
   <link href='https://fonts.googleapis.com/css?family=Raleway:400,800,300' rel='stylesheet' type='text/css'>
   <?php // Load our CSS ?>
   <link rel="stylesheet" type="text/css" href="<?php bloginfo( 'stylesheet_url' ); ?>" />
@@ -18,18 +20,20 @@
 
 <body <?php body_class(); ?>>
 
-<header>
-  <div class="container">
-    <h1>
-      <a href="<?php echo home_url( '/' ); ?>" title="<?php bloginfo( 'name', 'display' ); ?>" rel="home">
-        <?php bloginfo( 'name' ); ?>
-      </a>
-    </h1>
+<div class="hero">
+  <header>
+    <div class="container header">
+      <h2>
+        <a href="<?php echo home_url( '/' ); ?>" title="<?php bloginfo( 'name', 'display' ); ?>" rel="home">
+          <?php bloginfo( 'name' ); ?>
+        </a>
+      </h2>
 
-    <?php wp_nav_menu( array(
-      'container' => false,
-      'theme_location' => 'primary'
-    )); ?>
-  </div> <!-- /.container -->
-</header><!--/.header-->
+      <?php wp_nav_menu( array(
+        'container' => false,
+        'theme_location' => 'primary'
+      )); ?>
+<!--       <i class='fa fa-bars'></i> -->
+    </div> <!-- /.container -->
+  </header><!--/.header-->
 

@@ -1,10 +1,26 @@
+
+$orange: #EF3D37;
+$bluegrey: #789ABB;
+$grey: #4C5760;
+$lightgrey: #93A8AC;
+$blue: #434DB0;
+
+
 a {
-	color: #BA209B;
 	text-decoration: none;
+	color: black;
 	&:hover {
-		color: #D424B1;
+		color: $grey;
 	}
 }
+
+// headers
+
+h2 {
+	padding: 0;
+	margin: 0;
+}
+
 
 /* paragraphs */
 

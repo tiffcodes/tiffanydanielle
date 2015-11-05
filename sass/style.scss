@@ -1,11 +1,17 @@
 /*
-* Theme Name: HackerYou Starter Theme
-* Theme URI: http://hackeryou.com;
-* Description: Starter theme for building any website. Created by HackerYou. * Rename this to your own theme page.
+* Theme Name: Tiffany Danielle 
+* Theme URI: http://tiffanydanielle.ca
+* Description: A theme developed by Tiffany Danielle 
 * Version: 1.0
-* Author: HackerYou
-* Author URI: http://hackeryou.com
+* Author: Tiffany Danielle
+* Author URI: http://tiffanydanielle.ca
 */
+
+
+@mixin fontSize($fontSize){
+	font-size: $fontSize * 1px;
+	font-size: ($fontSize / 10) * 1rem;
+}
 
 @import 'normalize';
 @import 'typography';
@@ -19,16 +25,27 @@ Default Styling
 ====================================
 */
 
+$orange: #EF3D37;
+$bluegrey: #789ABB;
+$grey: #4C5760;
+$lightgrey: #93A8AC;
+$blue: #434DB0;
+
+
 img {
 	max-width: 100%;
 }
 
 body {
+	font-family: 'raleway', sans-serif;
+	font-weight: 400;
 	color: #333;
+	@include fontSize(16);
+	-webkit-font-smoothing: antialiased;
 }
 
 .container {
-	max-width: 1200px;
+	max-width: 78%;
 	margin: 0 auto;
 }
 
@@ -43,9 +60,146 @@ body {
 }
 
 
+// HEADER
 
 
+.hero {
+	background-image: url(images/tiff-headshot.jpg);
+	background-size: cover;
+	height: 100vh;
+}
+
+.container {
+	position: relative;
+	h1 {
+		margin: 33% 0 0 60%;
+		color: white;
+		text-transform: uppercase;
+		font-weight: 300;
+		@include fontSize(29);
+		letter-spacing: 2px;
+		p {
+			font-weight: 800;
+			padding: 0;
+			margin: 0;
+			position: relative;
+			top: -20px;
+			right: -5px;
+			letter-spacing: 2px;
+		}
+	}	
+	p.title {
+		color: white;
+		font-weight: 200;
+		@include fontSize(8.3);
+		position: absolute;
+		bottom: -25px;
+		right: 274px;
+		&:after {
+			content:" ";
+			background-color: white;
+			height: 1px;
+			width: 50px;
+			display: block;
+			margin: 10px 0 0;
+		}
+	}
+}
 
 
+// ABOUT ME
+
+.about {
+	margin: 0 0 150px 0;
+}
+
+
+h3 {
+	font-weight: 800;
+	text-transform: uppercase;
+	@include fontSize(18);
+	text-align: center;
+	padding: 50px 0;
+	letter-spacing: 1px;
+	&:before {
+		content:" ";
+		background-color: black;
+		height: 1px;
+		width: 50px;
+		display: block;
+		margin: 0 51% 10px 38.5%;
+	}
+}
+
+.container1 {
+	max-width: 45%;
+	margin: 0 auto;
+}
+
+
+.skill {
+	display: flex;
+	flex-direction: row;
+	flex-wrap: wrap;
+	justify-content: space-around;
+	i {
+		// align-self: auto;
+		flex: 1 0 auto;
+		text-align: center;
+		margin: 8px 40px;
+		padding: 10px;			
+		@include fontSize(15);
+		background-color: $bluegrey;
+		border-radius: 50%;
+	}
+}
+
+.aboutMe {
+	margin: 50px 0 20px;
+	.short {
+		text-align: right;
+		font-weight: 800;
+		float: left;
+		width: 37%;
+		margin: 0 3% 0 0;
+		@include fontSize(10);
+	}
+	.long {
+		float: left;
+		width: 60%;
+		columns: 2;
+		text-align: left;
+		@include fontSize(9);
+		color: $grey;
+	}
+}
+.resumeButton {
+	background-color: $blue;
+	box-shadow: 2px 2px darken($blue, 20%);
+	border-radius: 5px;
+	width: 200px;
+	text-align: center;
+	margin: 0 0 0 40%;
+	p {
+		@include fontSize(9);
+		padding: 5px;
+	}
+}		
+
+
+// PORTFOLIO SECTION
+
+section.portfolio {
+	background-color: $orange;
+	padding-top: 10px;
+	h3 {
+		padding: 60px 0;
+		color: white;
+		&:before {
+			margin: 0 51% 10px 42.5%;
+			background-color: white;
+		}
+	}
+}	
 
 
