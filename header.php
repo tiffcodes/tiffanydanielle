@@ -22,12 +22,10 @@
 
 <div class="hero">
   <header>
-    <div class="container header">
-      <h2>
-        <a href="<?php echo home_url( '/' ); ?>" title="<?php bloginfo( 'name', 'display' ); ?>" rel="home">
-          <?php bloginfo( 'name' ); ?>
-        </a>
-      </h2>
+    <div class="container2 header">
+      <div class="tiffany">
+        <img src=" <?php echo get_template_directory_uri(); ?>/tiffanydaniellelighter.png">
+      </div> <!-- /tiffany -->
 
       <?php wp_nav_menu( array(
         'container' => false,

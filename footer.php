@@ -1,12 +1,13 @@
 		<footer class='contact'>
-			<h3>Contact</h3>
-			<div class='container flexbox'>
+			<h3>Contact <span>Me</span></h3>
+			<p class='connect'>Connect with me!</p>
+			<div class='container contactInformation'>
 
 			<!-- CONTACT SECTION -->
 
 				<div class="contactInfo">
 					<a href='mailto:hello@tiffanydanielle.ca'>
-						<h4>hello@tiffanydanielle.ca</h4>
+						<h4 class='email'>hello@tiffanydanielle.ca</h4>
 					</a>
 					<a href='#'>
 						<h4>416-389-8787</h4>
@@ -16,9 +17,16 @@
 				
 			<!-- FORM SECTION -->
 
-		        <div class="form">
-		        	
-		        </div> <!-- /form -->
+		        <form action='http://formspree.io/hello@tiffanydanielle.ca' method='POST'>
+		        	<input type='text' placeholder='Name'>
+		        	<input type='email' placeholder='Email Address'>
+		        	<input type='textarea' placeholder='Message'>
+		        	<input type="text" name="_gotcha" style="display:none" />
+		        	<input type="hidden" name="_next" value="http://tiffanydanielle.ca"/>
+		        	<div class="submit">
+		        		<input type='submit' text='Submit'>
+		        	</div>
+		        </form> <!-- /form -->
 		    </div> <!--  /container /flexbox -->
 		    <!-- SOCIAL SECTION -->
 		    <div class="container">
@@ -49,6 +57,7 @@
 						<?php wp_reset_postdata(); ?>
 						
 					<?php endif; ?>
+					<p class='copy'>&copy Tiffany Danielle</p>
 
 		        </div> <!-- /social --> 
 			</div> <!-- /container -->

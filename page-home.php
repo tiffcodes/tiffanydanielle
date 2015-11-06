@@ -22,7 +22,7 @@ get_header();  ?>
 
 	<section class='about'>
 		<div class='container1'>
-			<h3>About Me</h3>
+			<h3>About <span>Me</span></h3>
 			<div class='skill'>
 
 				<?php while(has_sub_field('skills')): ?>
@@ -54,9 +54,9 @@ get_header();  ?>
 
 
 	<section class="portfolio">
-		<div class="container1">
+		<div class="container">
 			<h3>Portfolio</h3>
-			<div class="projects">
+
 
 				<!-- Bringing in portfolio items  -->
 
@@ -73,34 +73,34 @@ get_header();  ?>
 					<?php if ( $portfolioInfo->have_posts() ) : ?>
 
 						<?php while ($portfolioInfo->have_posts()) : $portfolioInfo->the_post(); ?>
-
+							<div class="projects">
 								<div class="projectPhoto">
-									<?php the_post_thumbnail('full'); ?>
+									<?php the_post_thumbnail('portfolioItem'); ?>
+								</div> <!-- /projectPhoto -->
+
+								<div class="projectInfo clearfix">
+									<?php while(has_sub_field('technologies')): ?>
+									  <div class='techUsed'>
+									  	<p><?php the_sub_field('tech_used'); ?> / </p>
+									  </div> <!-- /techUsed -->
+									<?php endwhile; ?>
+
+									<h4><?php the_title(); ?></h4>
+									<p><?php the_field('short_description'); ?></p>
+
 									<div class="view">
 										<a href='<?php the_field('live_link'); ?>'><p>View Live</p></a>
 										<a href='<?php the_field('github_link'); ?>'><i class='devicons devicons-github_badge'></i></a>
 									</div> <!-- /view -->
-								</div> <!-- /projectPhoto -->
-
-								<div class="projectInfo clearfix">
-									<h4><?php the_title(); ?></h4>
-									<p><?php the_field('short_description'); ?></p>
-
-
-									<?php while(has_sub_field('technologies')): ?>
-									  <div class='techUsed'>
-									  	<?php the_sub_field('tech_used'); ?> / 
-									  </div> <!-- /techUsed -->
-									<?php endwhile; ?>
 
 								</div> <!-- /projectInfo -->
-						
+							</div> <!-- /projects -->
 						<?php endwhile; ?>
 						<?php wp_reset_postdata(); ?>
 						
 					<?php endif; ?>
 
-			</div> <!-- /projects -->
+
 		</div> <!-- /container -->
 	</section> <!-- /portfolio -->
 

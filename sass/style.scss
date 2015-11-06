@@ -30,7 +30,8 @@ $bluegrey: #789ABB;
 $grey: #4C5760;
 $lightgrey: #93A8AC;
 $blue: #434DB0;
-
+$darkblue: #011627;
+$black: #011627;
 
 img {
 	max-width: 100%;
@@ -45,7 +46,12 @@ body {
 }
 
 .container {
-	max-width: 78%;
+	max-width: 1250px;
+	margin: 0 auto;
+}
+
+.container2 {
+	max-width: 80%;
 	margin: 0 auto;
 }
 
@@ -70,13 +76,15 @@ body {
 }
 
 .container {
+	width: 70%;
+	margin: 0 auto;
 	position: relative;
 	h1 {
-		margin: 33% 0 0 60%;
+		margin: 37% 0 0 60%;
 		color: white;
 		text-transform: uppercase;
 		font-weight: 300;
-		@include fontSize(29);
+		@include fontSize(34);
 		letter-spacing: 2px;
 		p {
 			font-weight: 800;
@@ -91,10 +99,10 @@ body {
 	p.title {
 		color: white;
 		font-weight: 200;
-		@include fontSize(8.3);
+		@include fontSize(10);
 		position: absolute;
 		bottom: -25px;
-		right: 274px;
+		right: 196px;
 		&:after {
 			content:" ";
 			background-color: white;
@@ -111,29 +119,32 @@ body {
 
 .about {
 	margin: 0 0 150px 0;
+	span {
+		font-weight: 300;
+	}
 }
 
 
 h3 {
-	color: black;
+	color: $black;
 	font-weight: 800;
 	text-transform: uppercase;
-	@include fontSize(22);
+	@include fontSize(26);
 	text-align: center;
 	padding: 50px 0;
 	letter-spacing: 1px;
-	&:before {
+	&:after {
 		content:" ";
-		background-color: black;
+		background-color: $black;
 		height: 1px;
 		width: 50px;
 		display: block;
-		margin: 0 51% 10px 35.2%;
+		margin: 20px auto 0;
 	}
 }
 
 .container1 {
-	max-width: 45%;
+	max-width: 50%;
 	margin: 0 auto;
 }
 
@@ -152,7 +163,7 @@ h3 {
 		margin: 8px 30px;
 		padding: 10px;			
 		@include fontSize(30);
-		color: $blue;
+		color: $orange;
 		// border-radius: 50%;
 	}
 	p {
@@ -172,14 +183,13 @@ h3 {
 		text-align: right;
 		font-weight: 800;
 		float: left;
-		width: 37%;
+		width: 28.5%;
 		margin: 0 3% 0 0;
 		@include fontSize(12);
 	}
 	.long {
 		float: left;
-		width: 60%;
-		columns: 2;
+		width: 68.5%;
 		text-align: left;
 		@include fontSize(9);
 		color: $grey;
@@ -187,15 +197,13 @@ h3 {
 }
 
 .resumeButton {
-	background-color: $blue;
-	box-shadow: 2px 2px darken($blue, 20%);
-	border-radius: 5px;
+	background-color: $orange;
 	width: 200px;
 	text-align: center;
-	margin: 0 0 0 40%;
+	margin: 0 0 0 32%;
 	p {
 		@include fontSize(9);
-		padding: 5px;
+		padding: 7px;
 	}
 }		
 
@@ -203,15 +211,10 @@ h3 {
 // PORTFOLIO SECTION
 
 section.portfolio {
-	background-color: $grey;
+	background-color: #898989;
 	padding-top: 10px;
 	h3 {
 		padding: 60px 0;
-		color: white;
-		&:before {
-			margin: 0 51% 10px 34%;
-			background-color: white;
-		}
 	}
 	.projects {
 		color: white;
@@ -219,58 +222,89 @@ section.portfolio {
 		flex-wrap: wrap;
 		flex-direction: row;
 		.projectPhoto {
-			flex: 1 0 60%;
-			position: relative;
-			.view {
-				position: absolute;
-				bottom: 0;
-				right: 0;
-				background-color: $blue;
-				@include fontSize(10);
-				font-weight: 800;
-				width: 30%;
-				p {
-					float: left;
-					width: 85%;
-				}
-				i {
-					@include fontSize(14);
-				}
+			margin-top: 30px;
+			flex: 1 0 45%;
+			&nth-child(even) {
+				order: 2;
 			}
 		}
 		.projectInfo {
+			margin-top: 30px;
+			color: black;
 			padding-top: 30px;
-			flex: 1 0 40%;
+			flex: 1 0 50%;
+			&nth-child(even) {
+				order: -1;
+			}
 			p {
 				@include fontSize(9);
 			}
 			.techUsed {
-				float: left;
-				
 				@include fontSize(8);
 				font-weight: 800;
+				float: left;
+			}
+			h4 {
+				clear: both;
+				margin: 0;
 			}
 		}
 	}
 }	
-
+section.portfolio .projects:nth-child(odd) {
+	flex-direction: row-reverse;
+}
 
 // FOOTER
+
+
 footer {
 	h3 {
-		padding: 60px 0;
-		&:before {
-			margin: 0 51% 10px 44%;
+		padding: 60px 0 0 0;
+		margin: 0;
+		&:after {
+			display: none;
+		}
+		span {
+			font-weight: 200;
+		}
+	}
+	a {
+		&:hover {
+			color: $orange;
+		}
+	}
+	h4 {
+		padding: 25px 0 0 0;
+	}
+	p.connect {
+		@include fontSize(10);
+		text-align: center;
+		margin-left: -10%;
+		position: relative;
+		&:after {
+			position: absolute;
+			bottom: -12px;
+			right: 50.8%;
+			content:" ";
+			background-color: black;
+			height: 2px;
+			width: 50px;
+			display: block;
+			margin: 10px 0 0;
+			text-align: center;
 		}
 	}
 }
 
-.flexbox {
+.contactInformation {
+	padding: 5% 0 0 0;
 	display: flex;
 	flex-wrap: wrap;
 	flex-direction: row;
 	& > * {
-		flex: 1 0 50%;
+		flex: 1 0 45%;
+		margin: 2.5%;
 	}
 }
 
@@ -279,13 +313,69 @@ footer {
 }
 
 .social {
-	padding: 10% 0 5%;
+	padding: 5% 0 5%;
 	text-align: center;
 	a {
 		padding: 0 10px;
 	}
+	p {
+		@include fontSize(7);
+		padding-top: 20px;
+	}
 }
 
+// FORM
 
+form {
+	margin: 0 0 0 0;
+	input {
+		border: none;
+		border-bottom: 1px solid black;
+		padding: 0 0 25px 0;
+		margin: 12px;
+	}
+	input[type=text] {
+		width: 65%;
+	}
+	input[type=email] {
+		width: 65%;
+	}
+	input[type=textarea] {
+		padding-bottom: 55px;
+		width: 65%;
+	}
+	input[type=submit] {
+		border: none;
+		@include fontSize(8);
+		padding: 10px 60px;
+		margin-top: 50px;
+		text-transform: uppercase;
+		color: black;
+		background-color: $orange;
+	}
+}
 
+::-webkit-input-placeholder {
+	font-weight: 800;
+	@include fontSize(11);
+	color: black;
+}
+
+:-moz-placeholder { /* Firefox 18- */
+font-weight: 800;
+@include fontSize(11);
+color: black;
+}
+
+::-moz-placeholder {  /* Firefox 19+ */
+	font-weight: 800;
+	@include fontSize(11);
+	color: black;
+}
+
+:-ms-input-placeholder {  
+    font-weight: 800;
+    @include fontSize(11);
+    color: black;
+}
 
