@@ -1,6 +1,5 @@
 		<footer class='contact'>
 			<h3>Contact <span>Me</span></h3>
-			<p class='connect'>Connect with me!</p>
 			<div class='container contactInformation'>
 
 			<!-- CONTACT SECTION -->

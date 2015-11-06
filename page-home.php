@@ -23,16 +23,7 @@ get_header();  ?>
 	<section class='about'>
 		<div class='container1'>
 			<h3>About <span>Me</span></h3>
-			<div class='skill'>
 
-				<?php while(has_sub_field('skills')): ?>
-					<div class="tech">
-		            	<i class='devicons devicons-<?php the_sub_field('icon_name'); ?>'></i>
-		            	<p><?php the_sub_field('skill'); ?></p>
-		           	</div> <!-- /tech -->
-	            <?php endwhile; ?>
-
-	        </div> <!-- /skill --> 
 	        <div class="aboutMe clearfix">
 	        	<div class="short">
 	        		<?php the_field('short_about_me'); ?>
@@ -46,6 +37,16 @@ get_header();  ?>
 	  				<p>Download My Resume</p>
 	  			</a>
 	  		</div> <!-- /resumeButton -->
+	  		
+			<div class='skill'>
+				<?php while(has_sub_field('skills')): ?>
+					<div class="tech">
+		            	<i class='devicons devicons-<?php the_sub_field('icon_name'); ?>'></i>
+		            	<p><?php the_sub_field('skill'); ?></p>
+		           	</div> <!-- /tech -->
+	            <?php endwhile; ?>
+           	</div> <!-- /skill --> 
+
 		</div> <!-- /container1 -->
 	</section> <!-- /about -->
 
