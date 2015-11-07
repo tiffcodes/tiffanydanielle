@@ -270,3 +270,18 @@ function get_post_parent($post) {
 
 
 show_admin_bar(false);
+
+// Add class to each a inside li item in the menu (Navigation)
+add_filter('nav_menu_link_attributes', 'addLinkClass', 10, 1);
+function addLinkClass($atts) {
+	$atts['class'] = 'hvr-underline-from-left';
+	return $atts;
+}
+
+
+
+
+
+
+
+

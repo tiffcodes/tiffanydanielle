@@ -26,7 +26,7 @@
       <div class="tiffany">
         <img src=" <?php echo get_template_directory_uri(); ?>/tiffanydaniellelighter.png">
       </div> <!-- /tiffany -->
-
+  
       <?php wp_nav_menu( array(
         'container' => false,
         'theme_location' => 'primary'

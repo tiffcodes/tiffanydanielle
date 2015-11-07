@@ -1,4 +1,4 @@
-		<footer class='contact'>
+		<footer class='contact' id='contact'>
 			<h3>Contact <span>Me</span></h3>
 			<div class='container contactInformation'>
 
@@ -23,7 +23,7 @@
 		        	<input type="text" name="_gotcha" style="display:none" />
 		        	<input type="hidden" name="_next" value="http://tiffanydanielle.ca"/>
 		        	<div class="submit">
-		        		<input type='submit' text='Submit'>
+		        		<input type='submit' text='Submit' class='button'>
 		        	</div>
 		        </form> <!-- /form -->
 		    </div> <!--  /container /flexbox -->

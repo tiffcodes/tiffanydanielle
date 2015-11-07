@@ -132,6 +132,7 @@ h3 {
 	@include fontSize(26);
 	text-align: center;
 	padding: 50px 0;
+	margin: 15% auto 0;
 	letter-spacing: 1px;
 	&:after {
 		content:" ";
@@ -141,6 +142,9 @@ h3 {
 		display: block;
 		margin: 20px auto 0;
 	}
+	span {
+		font-weight: 200;
+	}
 }
 
 .container1 {
@@ -148,6 +152,47 @@ h3 {
 	margin: 0 auto;
 }
 
+// ABOUT ME
+
+.aboutMe {
+	margin: 20px 0 20px;
+	.short {
+		text-align: right;
+		font-weight: 800;
+		float: left;
+		width: 28.5%;
+		margin: 0 3% 0 0;
+		@include fontSize(12);
+	}
+	.long {
+		line-height: 1.6;
+		float: left;
+		width: 68.5%;
+		text-align: left;
+		@include fontSize(9);
+		color: $grey;
+	}
+}
+
+.button {
+	background-color: $orange;
+	text-align: center;
+	text-transform: uppercase;
+	@include fontSize(8);
+	font-weight: 800;
+	letter-spacing: 1.5px;
+	color: black;
+}
+
+.resumeButton {
+	width: 30%;
+	margin: 30px 0 0 31.5%;
+	p {
+		padding: 15px;
+	}
+}		
+
+// SKILLS
 
 .skill {
 	display: flex;
@@ -174,51 +219,16 @@ h3 {
 	}
 }
 
-.aboutMe {
-	margin: 20px 0 20px;
-	.short {
-		text-align: right;
-		font-weight: 800;
-		float: left;
-		width: 28.5%;
-		margin: 0 3% 0 0;
-		@include fontSize(12);
-	}
-	.long {
-		line-height: 1.6;
-		float: left;
-		width: 68.5%;
-		text-align: left;
-		@include fontSize(9);
-		color: $grey;
-	}
-}
-
-.resumeButton {
-	background-color: $orange;
-	width: 30%;
-	text-align: center;
-	margin: 0 0 0 31.5%;
-	p {
-		@include fontSize(8);
-		letter-spacing: 1.5px;
-		color: black;
-		padding: 15px;
-		text-transform: uppercase;
-	}
-}		
 
 
 // PORTFOLIO SECTION
 
 section.portfolio {
-	background-color: #898989;
-	padding-top: 10px;
-	h3 {
-		padding: 60px 0;
-	}
+	background-color: lightgrey;
+	padding: 1% 0 15%;
 	.projects {
 		color: white;
+		padding: 50px;
 		display: flex;
 		flex-wrap: wrap;
 		flex-direction: row;
@@ -230,15 +240,17 @@ section.portfolio {
 			}
 		}
 		.projectInfo {
-			margin-top: 30px;
 			color: black;
-			padding-top: 30px;
 			flex: 1 0 50%;
+			padding: 5%;
 			&nth-child(even) {
 				order: -1;
 			}
 			p {
 				@include fontSize(9);
+				margin: 0;
+				padding: 0;
+				line-height: 1.3rem;
 			}
 			.techUsed {
 				@include fontSize(8);
@@ -254,19 +266,13 @@ section.portfolio {
 }	
 section.portfolio .projects:nth-child(odd) {
 	flex-direction: row-reverse;
+	background-color: grey;
 }
 
 // FOOTER
 
 
 footer {
-	h3 {
-		padding: 60px 0 0 0;
-		margin: 0;
-		span {
-			font-weight: 200;
-		}
-	}
 	a {
 		&:hover {
 			color: $orange;
@@ -327,37 +333,36 @@ form {
 	}
 	input[type=submit] {
 		border: none;
-		letter-spacing: 1.5px;
 		color: black;
-		@include fontSize(8);
 		padding: 15px 60px;
 		margin-top: 50px;
-		text-transform: uppercase;
-		background-color: $orange;
+		&:hover {
+			color: white;
+		}
 	}
 }
 
 ::-webkit-input-placeholder {
 		color: $grey;
 		line-height: 1.6;
-		@include fontSize(9);
+		@include fontSize(11);
 }
 
 :-moz-placeholder { /* Firefox 18- */
 		color: $grey;
 		line-height: 1.6;
-		@include fontSize(9);
+		@include fontSize(11);
 }
 
 ::-moz-placeholder {  /* Firefox 19+ */
 		color: $grey;
 		line-height: 1.6;
-		@include fontSize(9);
+		@include fontSize(11);
 }
 
 :-ms-input-placeholder {  
 		color: $grey;
 		line-height: 1.6;
-		@include fontSize(9);
+		@include fontSize(11);
 }
 

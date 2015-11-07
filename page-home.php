@@ -20,7 +20,7 @@ get_header();  ?>
 <!-- ABOUT SECTION -->
 
 
-	<section class='about'>
+	<section class='about' id='about'>
 		<div class='container1'>
 			<h3>About <span>Me</span></h3>
 
@@ -32,12 +32,12 @@ get_header();  ?>
 	        		<?php the_field('long_about_me'); ?>
 	        	</div> <!-- /long -->
 	        </div> <!-- /aboutMe -->
-	  		<div class="resumeButton">
+	  		<div class="resumeButton button">
 	  			<a href="#">
-	  				<p>Download My Resume</p>
+	  				<p>View My Resume</p>
 	  			</a>
 	  		</div> <!-- /resumeButton -->
-	  		
+
 			<div class='skill'>
 				<?php while(has_sub_field('skills')): ?>
 					<div class="tech">
@@ -54,7 +54,7 @@ get_header();  ?>
 <!-- PORTFOLIO SECTION -->
 
 
-	<section class="portfolio">
+	<section class="portfolio" id='portfolio'>
 		<div class="container">
 			<h3>Portfolio</h3>
 
