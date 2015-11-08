@@ -13,7 +13,6 @@
   <?php // Load our CSS ?>
   <link rel="stylesheet" type="text/css" href="<?php bloginfo( 'stylesheet_url' ); ?>" />
 
-
   <?php wp_head(); ?>
 </head>
 
@@ -23,14 +22,16 @@
 <div class="hero">
   <header>
     <div class="container2 header">
-      <div class="tiffany">
+      <div class="tiffany wow fadeInLeft animated">
         <img src=" <?php echo get_template_directory_uri(); ?>/tiffanydaniellelighter.png">
       </div> <!-- /tiffany -->
-  
+
+      <div class="navigation animated fadeInRight wow">
       <?php wp_nav_menu( array(
         'container' => false,
         'theme_location' => 'primary'
       )); ?>
+      </div>
 <!--       <i class='fa fa-bars'></i> -->
     </div> <!-- /.container -->
   </header><!--/.header-->

@@ -40,7 +40,7 @@ get_header();  ?>
 
 			<div class='skill'>
 				<?php while(has_sub_field('skills')): ?>
-					<div class="tech">
+					<div class="tech wow animated fadeInUp">
 		            	<i class='devicons devicons-<?php the_sub_field('icon_name'); ?>'></i>
 		            	<p><?php the_sub_field('skill'); ?></p>
 		           	</div> <!-- /tech -->
@@ -74,25 +74,26 @@ get_header();  ?>
 					<?php if ( $portfolioInfo->have_posts() ) : ?>
 
 						<?php while ($portfolioInfo->have_posts()) : $portfolioInfo->the_post(); ?>
-							<div class="projects">
+							<div class="projects animated fadeInLeft wow data-wow-delay="1s"">
 								<div class="projectPhoto">
 									<?php the_post_thumbnail('portfolioItem'); ?>
 								</div> <!-- /projectPhoto -->
 
 								<div class="projectInfo clearfix">
-									<?php while(has_sub_field('technologies')): ?>
-									  <div class='techUsed'>
-									  	<p><?php the_sub_field('tech_used'); ?> / </p>
-									  </div> <!-- /techUsed -->
-									<?php endwhile; ?>
-
+									<div class='techUsed'>
+										<?php while(has_sub_field('technologies')): ?>
+										  	<p><?php the_sub_field('tech_used'); ?> / </p>
+										<?php endwhile; ?>
+									</div> <!-- /techUsed -->
 									<h4><?php the_title(); ?></h4>
-									<p><?php the_field('short_description'); ?></p>
+									<p><?php the_field('long_description'); ?></p>
 
-									<div class="view">
+									<div class="buttonLink">
 										<a href='<?php the_field('live_link'); ?>'><p>View Live</p></a>
+									</div> <!-- /buttonLink -->
+									<div class="buttonLink">
 										<a href='<?php the_field('github_link'); ?>'><i class='devicons devicons-github_badge'></i></a>
-									</div> <!-- /view -->
+									</div> <!-- /buttonLink -->
 
 								</div> <!-- /projectInfo -->
 							</div> <!-- /projects -->

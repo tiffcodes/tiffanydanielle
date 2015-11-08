@@ -169,13 +169,12 @@ h3 {
 		float: left;
 		width: 68.5%;
 		text-align: left;
-		@include fontSize(9);
+		@include fontSize(9.5);
 		color: $grey;
 	}
 }
 
 .button {
-	background-color: $orange;
 	text-align: center;
 	text-transform: uppercase;
 	@include fontSize(8);
@@ -185,6 +184,7 @@ h3 {
 }
 
 .resumeButton {
+	background-color: $orange;
 	width: 30%;
 	margin: 30px 0 0 31.5%;
 	p {
@@ -221,10 +221,11 @@ h3 {
 
 
 
+
 // PORTFOLIO SECTION
 
 section.portfolio {
-	background-color: lightgrey;
+	background-color: $lightgrey;
 	padding: 1% 0 15%;
 	.projects {
 		color: white;
@@ -243,31 +244,50 @@ section.portfolio {
 			color: black;
 			flex: 1 0 50%;
 			padding: 5%;
-			&nth-child(even) {
-				order: -1;
-			}
 			p {
-				@include fontSize(9);
+				@include fontSize(9.5);
 				margin: 0;
 				padding: 0;
-				line-height: 1.3rem;
+				line-height: 1.6;
+				float: left;
+				font-weight: 300;
 			}
 			.techUsed {
-				@include fontSize(8);
-				font-weight: 800;
-				float: left;
+				margin: 0 0 70px 0;
+				p {
+					line-height: 1.6;
+					float: left;
+					font-weight: 800;
+				}
 			}
+
 			h4 {
 				clear: both;
-				margin: 0;
+				margin: 20px 0;
+				@include fontSize(20);
+			}
+			 .buttonLink {
+				text-align: center;
+				text-transform: uppercase;
+				@include fontSize(8);
+				font-weight: 800;
+				letter-spacing: 1.5px;
+				color: black;
+				margin: 20px;
+				padding: 15px 0;
+				a {
+					display: inline-block;
+				}
 			}
 		}
 	}
 }	
 section.portfolio .projects:nth-child(odd) {
 	flex-direction: row-reverse;
-	background-color: grey;
+	background-color: lightgrey;
 }
+
+
 
 // FOOTER
 
@@ -332,6 +352,7 @@ form {
 		width: 65%;
 	}
 	input[type=submit] {
+		background-color: $orange;
 		border: none;
 		color: black;
 		padding: 15px 60px;
@@ -364,5 +385,130 @@ form {
 		color: $grey;
 		line-height: 1.6;
 		@include fontSize(11);
+}
+
+
+// ANIMATIONS
+
+.animated {
+  -webkit-animation-duration: 1s;
+  animation-duration: 1s;
+  -webkit-animation-fill-mode: both;
+  animation-fill-mode: both;
+}
+
+@-webkit-keyframes fadeInLeft {
+  from {
+    opacity: 0;
+    -webkit-transform: translate3d(-100%, 0, 0);
+    transform: translate3d(-100%, 0, 0);
+  }
+
+  to {
+    opacity: 1;
+    -webkit-transform: none;
+    transform: none;
+  }
+}
+
+@keyframes fadeInLeft {
+  from {
+    opacity: 0;
+    -webkit-transform: translate3d(-100%, 0, 0);
+    transform: translate3d(-100%, 0, 0);
+  }
+
+  to {
+    opacity: 1;
+    -webkit-transform: none;
+    transform: none;
+  }
+}
+
+.fadeInLeft {
+  -webkit-animation-name: fadeInLeft;
+  animation-name: fadeInLeft;
+}
+
+
+@-webkit-keyframes fadeInRight {
+  from {
+    opacity: 0;
+    -webkit-transform: translate3d(100%, 0, 0);
+    transform: translate3d(100%, 0, 0);
+  }
+
+  to {
+    opacity: 1;
+    -webkit-transform: none;
+    transform: none;
+  }
+}
+
+@keyframes fadeInRight {
+  from {
+    opacity: 0;
+    -webkit-transform: translate3d(100%, 0, 0);
+    transform: translate3d(100%, 0, 0);
+  }
+
+  to {
+    opacity: 1;
+    -webkit-transform: none;
+    transform: none;
+  }
+}
+
+.fadeInRight {
+  -webkit-animation-name: fadeInRight;
+  animation-name: fadeInRight;
+}
+
+
+@-webkit-keyframes fadeInUp {
+  from {
+    opacity: 0;
+    -webkit-transform: translate3d(0, 100%, 0);
+    transform: translate3d(0, 100%, 0);
+  }
+
+  to {
+    opacity: 1;
+    -webkit-transform: none;
+    transform: none;
+  }
+}
+
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    -webkit-transform: translate3d(0, 100%, 0);
+    transform: translate3d(0, 100%, 0);
+  }
+
+  to {
+    opacity: 1;
+    -webkit-transform: none;
+    transform: none;
+  }
+}
+
+.fadeInUp {
+  -webkit-animation-name: fadeInUp;
+  animation-name: fadeInUp;
+}
+
+@-webkit-keyframes fadeInUpBig {
+  from {
+    opacity: 0;
+    -webkit-transform: translate3d(0, 2000px, 0);
+    transform: translate3d(0, 2000px, 0);
+  }
+
+  to {
+    opacity: 1;
+    -webkit-transform: none;
+    transform: none;
+  }
 }
 

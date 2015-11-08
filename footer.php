@@ -44,7 +44,7 @@
 
 						<?php while ($contactInfo->have_posts()) : $contactInfo->the_post(); ?>
 
-							<section id="<?php echo $post->post_name; ?>">
+							<section id="<?php echo $post->post_name; ?>" class='wow animated fadeInUp'>
 								<a href='mailto: <?php the_field('email'); ?>'><i class='fa fa-envelope'></i></a>
 							    <a href='<?php the_field('phone'); ?>'><i class='fa fa-phone'></i></a>
 							   	<a href='<?php the_field('linkedin'); ?>'><i class='fa fa-linkedin'></i></a>
@@ -69,6 +69,10 @@
 		 g.src=("https:"==location.protocol?"//ssl":"//www")+".google-analytics.com/ga.js";
 		 s.parentNode.insertBefore(g,s)}(document,"script"));
 		</script>
+        <script src="<?php echo get_template_directory_uri(); ?>/js/wow.js"></script>
+        <script>
+        	new WOW().init();
+        </script>
 
 		<?php wp_footer(); ?>
 	</body>
