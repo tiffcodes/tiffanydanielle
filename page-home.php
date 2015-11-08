@@ -86,13 +86,14 @@ get_header();  ?>
 											  	<p><?php the_sub_field('tech_used'); ?> / </p>
 											<?php endwhile; ?>
 										</div> <!-- /techUsed -->
-										<h4><?php the_title(); ?></h4>
-										<p><?php the_field('long_description'); ?></p>
-
-										<div class="buttonLink">
-											<a href='<?php the_field('live_link'); ?>'><p>View Live</p></a>
+										<div class="projectTitle">
+											<h4><?php the_title(); ?></h4>
+											<p><?php the_field('long_description'); ?></p>
+										</div> <!-- /projectTitle -->
+										<div class="button link">
+											<p><a href='<?php the_field('live_link'); ?>'>View Live</a></p>
 										</div> <!-- /buttonLink -->
-										<div class="buttonLink">
+										<div class="button github">
 											<a href='<?php the_field('github_link'); ?>'><i class='devicons devicons-github_badge'></i></a>
 										</div> <!-- /buttonLink -->
 

@@ -174,13 +174,13 @@ h3 {
 .button {
 	text-align: center;
 	text-transform: uppercase;
-	@include fontSize(8);
 	font-weight: 800;
 	letter-spacing: 1.5px;
 	color: black;
 }
 
 .resumeButton {
+	@include fontSize(8);
 	background-color: $orange;
 	width: 30%;
 	margin: 30px 0 0 31.5%;
@@ -223,7 +223,7 @@ h3 {
 
 section.portfolio {
 	background-color: $lightgrey;
-	padding: 1% 0 15%;
+	padding: 1% 0 5%;
 	.container {
 		color: white;
 		padding: 50px;
@@ -246,8 +246,6 @@ section.portfolio {
 				margin: 0;
 				padding: 0;
 				line-height: 1.6;
-				float: left;
-				font-weight: 300;
 			}
 			.techUsed {
 				margin: 0 0 70px 0;
@@ -256,29 +254,53 @@ section.portfolio {
 					float: left;
 					font-weight: 800;
 				}
+			}	
+			.link {
+				margin: 20px 0;
+				width: 40%;
+				float: left;
+				border: 1px solid black;
+				padding: 15px;
+				p {
+					text-align: center;
+				}
+				a {
+					@include fontSize(8);
+				}
+				&:hover {
+					color: white;
+					background-color: darken($lightgrey, 10%);
+					border: 1px solid darken($lightgrey, 10%);
+					a {
+						color: white;
+					}
+				}
 			}
-
+			.github {
+				float: left;
+				margin: 20px 0 20px 15px;
+				width: 20%;
+				border: 1px solid darken($lightgrey, 10%);
+				padding: 15px;
+				@include fontSize(12.5);
+				background-color: darken($lightgrey, 10%);
+				&:hover {
+					background-color: transparent;
+					border: 1px solid black;
+					a {
+						color: white;
+					}
+				}
+			}	
 			h4 {
 				clear: both;
 				margin: 20px 0;
 				@include fontSize(20);
 			}
-			 .buttonLink {
-				text-align: center;
-				text-transform: uppercase;
-				@include fontSize(8);
-				font-weight: 800;
-				letter-spacing: 1.5px;
-				color: black;
-				margin: 20px;
-				padding: 15px 0;
-				a {
-					display: inline-block;
-				}
-			}
 		}
 	}
 }	
+
 section.portfolio .projects:nth-child(odd) {
 	background-color: lighten($lightgrey, 5%);
 	.container {
@@ -351,6 +373,7 @@ form {
 		width: 65%;
 	}
 	input[type=submit] {
+		@include fontSize(8);
 		background-color: $orange;
 		border: none;
 		color: black;
