@@ -105,8 +105,6 @@ get_header();  ?>
 						
 					<?php endif; ?>
 
-
-		<!-- </div> /container -->
 	</section> <!-- /portfolio -->
 
 

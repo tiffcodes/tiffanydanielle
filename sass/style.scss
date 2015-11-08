@@ -67,13 +67,13 @@ body {
 
 
 .hero {
-	background-image: url(images/tiff-headshot.jpg);
+	background: url(images/tiff-headshot.jpg) no-repeat center 10%;
 	background-size: cover;
 	height: 100vh;
 }
 
 .container {
-	width: 70%;
+	max-width: 70%;
 	margin: 0 auto;
 	position: relative;
 	h1 {
@@ -363,14 +363,14 @@ form {
 		margin: 7px 12px;
 	}
 	input[type=text] {
-		width: 65%;
+		max-width: 65%;
 	}
 	input[type=email] {
-		width: 65%;
+		max-width: 65%;
 	}
 	input[type=textarea] {
 		padding-bottom: 55px;
-		width: 65%;
+		max-width: 65%;
 	}
 	input[type=submit] {
 		@include fontSize(8);
@@ -534,3 +534,287 @@ form {
   }
 }
 
+
+// MEDIA QUERIES
+
+
+
+@media (max-width: 1196px) {
+	.container {
+		h1 {
+			margin: 37% 0 0 58%;
+		}
+		p.title {
+			right: 144px;
+		}
+	}
+	.container1 {
+		max-width: 60%;
+	}
+}
+
+@media (max-width: 1150px) {
+	.container {
+		h1 {
+			@include fontSize(28);
+			margin: 39% 0 0 58%;
+		}
+		p.title {
+			right: 132px;
+		}
+	}	
+}
+
+@media (max-width: 1050px) {
+	.container {
+		p.title {
+			right: 102px;
+		}
+	}	
+	section.portfolio .container {
+		max-width: 90%;
+	}
+	.container1 {
+		max-width: 70%;
+	}
+}
+
+@media (max-width: 1022px) {
+	.container {
+		p.title {
+			right: 94px;
+		}
+	}	
+}	
+
+@media (max-width: 1005px) {
+	.container {
+		p.title {
+			right: 89px;
+		}
+	}	
+	section.portfolio .container {
+		max-width: 95%;
+	}
+}	
+
+@media (max-width: 980px) {
+	.container {
+		h1 {
+			margin: 43% 0 0 59%;
+		}
+		p.title {
+			right: 75px;
+		}
+	}	
+	section.portfolio .container {
+		max-width: 100%;
+	}
+	ul.menu li a {
+		@include fontSize(7);
+	}
+}	
+
+/* Portrait tablet and small desktops */
+@media (max-width: 940px) {
+	.container {
+		p.title {
+			right: 64px;
+		}
+	}	
+}
+
+@media (max-width: 940px) {
+	.container {
+		p.title {
+			right: 53px;
+		}
+	}
+	.container1, .container {
+		max-width: 80%;
+	}
+}
+
+@media (max-width: 830px) {
+	.container {
+		h1 {
+			margin: 50% 0 0 61%;
+		}
+		p.title {
+			right: 52px;
+		}
+	}	
+	form input[type=email], form input[type=text], form input[type=textarea] {
+		max-width: 100%;
+	}
+}
+
+@media (max-width: 780px) {
+	.container {
+		h1 p {
+			top: -18px;
+		}
+		p.title {
+			right: 66px;
+		}
+	}
+	.container1, .container {
+		max-width: 90%;
+	}
+	.skill i {
+		@include fontSize(25);
+	}
+	section.portfolio .container .projectInfo .link a {
+		@include fontSize(5);
+	} 
+	form input {
+		margin: 4px 12px;
+	}
+}
+
+/* Landscape phone to portrait tablet */
+@media (max-width: 690px) {
+	.container {
+		h1 {
+			margin: 50% 0 0 61%;
+		}
+		p.title {
+			right: 35px;
+		}
+	}
+	.header .tiffany {
+		padding-top: 7px;
+	}	
+}
+
+/* anything as high or higher than the iPhone 6 */
+ @media (min-height: 667px) and (max-width:375px) {
+ 	.hero {
+ 		background-position: 35% 10%;
+ 	}
+ 	.container1, .container {
+		max-width: 95%;
+	}
+ 	.container {
+ 		h1 {
+ 			@include fontSize(21);
+ 			margin: 120% 0 0 47%;
+ 		}
+ 		h1 p {
+ 			top: -12px;
+ 		}
+ 		p.title {
+ 			@include fontSize(8);
+ 			right: 19px;
+ 		}
+ 	}
+ 	div.header .tiffany {
+ 		width: 87%;
+ 		margin-top: 13px;
+ 	}
+ 	h3 {
+ 		@include fontSize(13);
+ 		padding: 20px 0;
+ 		margin: 30px 0 0 0;
+ 	}
+ 	.aboutMe {
+ 		.short {
+ 			@include fontSize(9);
+ 			width: 35%;
+ 		}
+ 		.long {
+ 			@include fontSize(7);
+ 			width: 60%;
+ 		}
+ 	}
+ 	.resumeButton {
+ 		width: 41%;
+ 		@include fontSize(5);
+ 		margin: 30px 0 0 37%;
+ 		p {
+ 			padding: 10px;
+ 		}
+ 	}
+ 	.skill {
+ 		margin-top: 50px;
+	 	i {
+	 		margin: 20px;
+	 		@include fontSize(17)
+	 	}
+	 }
+	 section.about {
+	 	margin: 0 0 50px 0;
+	 }
+	 section.portfolio .container {
+	 	padding: 10px;
+		.projectInfo {
+			p {
+				@include fontSize(7);
+			}
+			h4 {
+				@include fontSize(14);
+			}
+			.techUsed {
+				margin: 0 0 75px;
+			}
+			.link a {
+				@include fontSize(4);
+				width: 50%;
+			}
+			.github {
+				padding: 18px;
+				@include fontSize(15);
+				width: 38%
+			}
+		}	
+	 }
+	 footer {
+	 	form input {
+	 		margin: 0 12px;
+	 	}
+	 	form input[type=submit] {
+			padding: 10px 30px;
+			line-height: 1.5;
+			@include fontSize(5);
+	 	}
+	 	form input[type=email], form input[type=text], form input[type=textarea] {
+			max-width: 85%;
+		}
+	 	h4 {
+	 		@include fontSize(8);
+	 		margin: 0 0 20px;
+	 	}
+	 	::-webkit-input-placeholder {
+			color: $grey;
+			line-height: 1.6;
+			@include fontSize(7);
+		}
+		:-moz-placeholder { /* Firefox 18- */
+			color: $grey;
+			line-height: 1.6;
+			@include fontSize(7);
+		}
+
+		::-moz-placeholder {  /* Firefox 19+ */
+			color: $grey;
+			line-height: 1.6;
+			@include fontSize(7);
+		}
+
+		:-ms-input-placeholder {  
+			color: $grey;
+			line-height: 1.6;
+			@include fontSize(7);
+		}
+	 }
+	 .social {
+	 	@include fontSize(9);
+	 }
+	 p.copy {
+	 	@include fontSize(5);
+	 }
+ }
+
+/* Landscape phones and down */
+@media (max-width: 480px) {
+}
