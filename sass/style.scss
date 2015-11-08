@@ -26,11 +26,8 @@ Default Styling
 */
 
 $orange: #EF3D37;
-$bluegrey: #789ABB;
 $grey: #4C5760;
 $lightgrey: #93A8AC;
-$blue: #434DB0;
-$darkblue: #011627;
 $black: #011627;
 
 img {
@@ -132,7 +129,7 @@ h3 {
 	@include fontSize(26);
 	text-align: center;
 	padding: 50px 0;
-	margin: 15% auto 0;
+	margin: 90px auto 0;
 	letter-spacing: 1px;
 	&:after {
 		content:" ";
@@ -227,7 +224,7 @@ h3 {
 section.portfolio {
 	background-color: $lightgrey;
 	padding: 1% 0 15%;
-	.projects {
+	.container {
 		color: white;
 		padding: 50px;
 		display: flex;
@@ -283,8 +280,10 @@ section.portfolio {
 	}
 }	
 section.portfolio .projects:nth-child(odd) {
-	flex-direction: row-reverse;
-	background-color: lightgrey;
+	background-color: lighten($lightgrey, 5%);
+	.container {
+		flex-direction: row-reverse;
+	}
 }
 
 

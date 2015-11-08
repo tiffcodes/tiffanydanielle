@@ -55,7 +55,7 @@ get_header();  ?>
 
 
 	<section class="portfolio" id='portfolio'>
-		<div class="container">
+<!-- 		<div class="container"> -->
 			<h3>Portfolio</h3>
 
 
@@ -74,28 +74,30 @@ get_header();  ?>
 					<?php if ( $portfolioInfo->have_posts() ) : ?>
 
 						<?php while ($portfolioInfo->have_posts()) : $portfolioInfo->the_post(); ?>
-							<div class="projects animated fadeInLeft wow data-wow-delay="1s"">
-								<div class="projectPhoto">
-									<?php the_post_thumbnail('portfolioItem'); ?>
-								</div> <!-- /projectPhoto -->
+							<div class="projects">
+								<div class="container">
+									<div class="projectPhoto animated fadeInRight wow data-wow-delay="1s"">
+										<?php the_post_thumbnail('portfolioItem'); ?>
+									</div> <!-- /projectPhoto -->
 
-								<div class="projectInfo clearfix">
-									<div class='techUsed'>
-										<?php while(has_sub_field('technologies')): ?>
-										  	<p><?php the_sub_field('tech_used'); ?> / </p>
-										<?php endwhile; ?>
-									</div> <!-- /techUsed -->
-									<h4><?php the_title(); ?></h4>
-									<p><?php the_field('long_description'); ?></p>
+									<div class="projectInfo clearfix animated fadeInLeft wow data-wow-delay="1s"">
+										<div class='techUsed'>
+											<?php while(has_sub_field('technologies')): ?>
+											  	<p><?php the_sub_field('tech_used'); ?> / </p>
+											<?php endwhile; ?>
+										</div> <!-- /techUsed -->
+										<h4><?php the_title(); ?></h4>
+										<p><?php the_field('long_description'); ?></p>
 
-									<div class="buttonLink">
-										<a href='<?php the_field('live_link'); ?>'><p>View Live</p></a>
-									</div> <!-- /buttonLink -->
-									<div class="buttonLink">
-										<a href='<?php the_field('github_link'); ?>'><i class='devicons devicons-github_badge'></i></a>
-									</div> <!-- /buttonLink -->
+										<div class="buttonLink">
+											<a href='<?php the_field('live_link'); ?>'><p>View Live</p></a>
+										</div> <!-- /buttonLink -->
+										<div class="buttonLink">
+											<a href='<?php the_field('github_link'); ?>'><i class='devicons devicons-github_badge'></i></a>
+										</div> <!-- /buttonLink -->
 
-								</div> <!-- /projectInfo -->
+									</div> <!-- /projectInfo -->
+								</div> <!-- /animated /fadeInLeft / wow /container -->
 							</div> <!-- /projects -->
 						<?php endwhile; ?>
 						<?php wp_reset_postdata(); ?>
@@ -103,7 +105,7 @@ get_header();  ?>
 					<?php endif; ?>
 
 
-		</div> <!-- /container -->
+		<!-- </div> /container -->
 	</section> <!-- /portfolio -->
 
 
