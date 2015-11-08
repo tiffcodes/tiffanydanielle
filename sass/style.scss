@@ -534,6 +534,16 @@ form {
   }
 }
 
+// HAMBURGER
+
+div.fa-bars {
+	display: none;
+}
+
+.flexplicit {
+	display: flex !important;
+}
+
 
 // MEDIA QUERIES
 
@@ -687,18 +697,41 @@ form {
 	}	
 }
 
+
+@media (max-width: 625px) {
+
+}
+
 /* anything as high or higher than the iPhone 6 */
- @media (min-height: 667px) and (max-width:375px) {
+ @media (min-height: 667px) and (min-width:375px) {
  	.hero {
  		background-position: 35% 10%;
  	}
  	.container1, .container {
 		max-width: 95%;
 	}
+	div.navigation {
+		display: none;
+		position: absolute;
+		padding-bottom: 10px;
+		top: 0;
+		right: 0;
+		width: 100%;
+		background: white;
+		flex-direction: column;
+		align-items: center;
+		justify-content: space-between;
+	}
+	div.fa-bars {
+		display: inline-block;
+		cursor: pointer;
+		text-align: right;
+		color: lightgrey;
+	}
  	.container {
  		h1 {
  			@include fontSize(21);
- 			margin: 120% 0 0 47%;
+ 			margin: 148% 0 0 47%;
  		}
  		h1 p {
  			top: -12px;
@@ -709,8 +742,9 @@ form {
  		}
  	}
  	div.header .tiffany {
- 		width: 87%;
- 		margin-top: 13px;
+ 		width: 50%;
+ 		margin: 0;
+ 		padding: 0;
  	}
  	h3 {
  		@include fontSize(13);

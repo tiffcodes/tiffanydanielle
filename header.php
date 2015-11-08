@@ -32,7 +32,7 @@
         'theme_location' => 'primary'
       )); ?>
       </div>
-<!--       <i class='fa fa-bars'></i> -->
+      <div class='fa fa-bars'></div>
     </div> <!-- /.container -->
   </header><!--/.header-->
 

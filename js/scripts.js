@@ -11,4 +11,12 @@ $(function() {
       }
     }
   });
+
+  $(".fa-bars").on("click", function(){
+    $("div.navigation").addClass("flexplicit");
+  });
+
+  $("a").on("click", function(){
+    $("div.navigation").removeClass("flexplicit");
+  });
 });
