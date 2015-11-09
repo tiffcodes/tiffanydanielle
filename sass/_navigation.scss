@@ -1,7 +1,7 @@
 $orange: #EF3D37;
-$bluegrey: #789ABB;
+$bluegrey: #E5EAF2;
 $grey: #4C5760;
-$lightgrey: #93A8AC;
+$lightgrey: #E5EAF2;
 $blue: #434DB0;
 
 
@@ -46,9 +46,10 @@ ul.menu {
 	flex-wrap: wrap;
 	li {
 		margin-right: 10px;
+		color: $grey;
 		a {
 			letter-spacing: 1.5px;
-			color: #898989;
+			color: $grey;
 			padding: 10px;
 			@include fontSize(8);
 			text-transform: uppercase;
