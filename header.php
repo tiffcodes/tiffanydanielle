@@ -13,6 +13,7 @@
   <?php // Load our CSS ?>
   <link rel="stylesheet" type="text/css" href="<?php bloginfo( 'stylesheet_url' ); ?>" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link type="image/png" href="favicon.png" rel="icon">
   <?php wp_head(); ?>
 </head>
 
@@ -22,11 +23,11 @@
 <div class="hero">
   <header>
     <div class="container2 header">
-      <div class="tiffany wow fadeInLeft animated">
+      <div class="tiffany wow fadeInDown animated">
         <img src=" <?php echo get_template_directory_uri(); ?>/tiffanydaniellelighter.png">
       </div> <!-- /tiffany -->
 
-      <div class="navigation animated fadeInRight wow">
+      <div class="navigation animated fadeInDown wow">
       <?php wp_nav_menu( array(
         'container' => false,
         'theme_location' => 'primary'

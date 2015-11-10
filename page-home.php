@@ -4,6 +4,15 @@
 	Template Name: Home Page
 */
 
+
+// Hey there! 
+// Thanks for stopping by!
+// I am currently looking for full time employment as a front-end developer. If you like what you see here, be sure to send me an email or give me a call! 
+// All the best, 
+// Tiffany 
+
+
+
 get_header();  ?>
 
 
@@ -76,11 +85,11 @@ get_header();  ?>
 						<?php while ($portfolioInfo->have_posts()) : $portfolioInfo->the_post(); ?>
 							<div class="projects">
 								<div class="container">
-									<div class="projectPhoto animated fadeInRight wow data-wow-delay="1s"">
+									<div class="projectPhoto animated fadeInUp wow data-wow-delay="1s"">
 										<?php the_post_thumbnail('portfolioItem'); ?>
 									</div> <!-- /projectPhoto -->
 
-									<div class="projectInfo clearfix animated fadeInLeft wow data-wow-delay="1s"">
+									<div class="projectInfo clearfix animated fadeInUp wow data-wow-delay="1s"">
 										<div class='techUsed'>
 											<?php while(has_sub_field('technologies')): ?>
 											  	<p><?php the_sub_field('tech_used'); ?> / </p>

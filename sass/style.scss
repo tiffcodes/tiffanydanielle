@@ -8,6 +8,16 @@
 */
 
 
+
+// Hey there! 
+// Thanks for stopping by!
+// I am currently looking for full time employment as a front-end developer. If you like what you see here, be sure to send me an email or give me a call! 
+// All the best, 
+// Tiffany 
+
+
+
+
 @mixin fontSize($fontSize){
 	font-size: $fontSize * 1px;
 	font-size: ($fontSize / 10) * 1rem;
@@ -44,6 +54,11 @@ body {
 
 .container {
 	max-width: 1250px;
+	margin: 0 auto;
+}
+
+.container1 {
+	max-width: 65%;
 	margin: 0 auto;
 }
 
@@ -144,11 +159,6 @@ h3 {
 	}
 }
 
-.container1 {
-	max-width: 65%;
-	margin: 0 auto;
-}
-
 // ABOUT ME
 
 .aboutMe {
@@ -215,8 +225,6 @@ h3 {
 		font-weight: 800;
 	}
 }
-
-
 
 
 // PORTFOLIO SECTION
@@ -537,6 +545,41 @@ form {
   }
 }
 
+@-webkit-keyframes fadeInDown {
+  from {
+    opacity: 0;
+    -webkit-transform: translate3d(0, -100%, 0);
+    transform: translate3d(0, -100%, 0);
+  }
+
+  to {
+    opacity: 1;
+    -webkit-transform: none;
+    transform: none;
+  }
+}
+
+@keyframes fadeInDown {
+  from {
+    opacity: 0;
+    -webkit-transform: translate3d(0, -100%, 0);
+    transform: translate3d(0, -100%, 0);
+  }
+
+  to {
+    opacity: 1;
+    -webkit-transform: none;
+    transform: none;
+  }
+}
+
+.fadeInDown {
+  -webkit-animation-name: fadeInDown;
+  animation-name: fadeInDown;
+}
+
+
+
 // HAMBURGER
 
 div.fa-bars {
@@ -549,8 +592,49 @@ div.fa-bars {
 
 
 // MEDIA QUERIES
+@media (max-width: 1355px) {
+	.container {
+		p.title {
+			right: 190px;
+		}
+	}
+}
 
+@media (max-width: 1315px) {
+	.container {
+		p.title {
+			right: 179px;
+		}
+	}
+}
 
+@media (max-width: 1270px) {
+	.container {
+		p.title {
+			right: 148px;
+		}
+	}
+}
+@media (max-width: 1270px) {
+	.container {
+		p.title {
+			right: 135px;
+		}
+	}
+}
+@media (max-width: 1210px) {
+	.container {
+		h1 {
+			margin: 37% 0 0 58%;
+		}
+		p.title {
+			right: 100px;
+		}
+	}
+	.container1 {
+		max-width: 60%;
+	}
+}
 
 @media (max-width: 1196px) {
 	.container {
@@ -576,6 +660,22 @@ div.fa-bars {
 			right: 132px;
 		}
 	}	
+}
+
+@media (max-width: 1111px) {
+	.container {
+		p.title {
+			right: 120px;
+		}
+	}
+}
+
+@media (max-width: 1088px) {
+	.container {
+		p.title {
+			right: 112px;
+		}
+	}
 }
 
 @media (max-width: 1050px) {
@@ -628,6 +728,14 @@ div.fa-bars {
 	}
 }	
 
+@media (max-width: 950px) {
+	.container {
+		p.title {
+			right: 66px;
+		}
+	}	
+}
+
 /* Portrait tablet and small desktops */
 @media (max-width: 940px) {
 	.container {
@@ -637,14 +745,30 @@ div.fa-bars {
 	}	
 }
 
-@media (max-width: 940px) {
+@media (max-width: 900px) {
 	.container {
 		p.title {
-			right: 53px;
+			right: 88px;
 		}
 	}
 	.container1, .container {
 		max-width: 80%;
+	}
+}
+
+@media (max-width: 873px) {
+	.container {
+		p.title {
+			right: 80px;
+		}
+	}
+}
+
+@media (max-width: 850px) {
+	.container {
+		p.title {
+			right: 71px;
+		}
 	}
 }
 
@@ -662,6 +786,13 @@ div.fa-bars {
 	}
 }
 
+@media (max-width: 790px) {
+	.container {
+		p.title {
+			right: 39px;
+		}
+	}
+}
 
 @media (max-width: 780px) {
 	.container {
@@ -713,7 +844,13 @@ div.fa-bars {
 		}	
 	 }
 }
-
+@media (max-width: 745px) {
+	.container {
+		p.title {
+			right: 52px;
+		}
+	}
+}
 @media (max-width: 715px) {
 	.container {
 		h1 p {
@@ -758,6 +895,23 @@ div.fa-bars {
 	}
 }
 
+@media (max-width: 670px) {
+	.container {
+		p.title {
+			right: 29px;
+		}
+	}
+}
+
+@media (max-width: 660px) {
+	.container {
+		p.title {
+			right: 25px;
+		}
+	}
+}
+
+
 @media (max-width: 650px) {
 	.container {
 		h1 {
@@ -765,6 +919,14 @@ div.fa-bars {
 		}
 		p.title {
 			right: 21px;
+		}
+	}
+}
+
+@media (max-width: 629px) {
+	.container {
+		p.title {
+			right: 14px;
 		}
 	}
 }
@@ -785,20 +947,20 @@ div.fa-bars {
 	.hero {
  		background-size: 600px;
  		background-position: 42% 20%;
- 		height: 60vh;
  	} 	
  	.container {
  		h1 {
  			@include fontSize(21);
- 			margin: 42% 0 0 43%;
+ 			margin: 0;
+ 			padding: 55% 0 0 47%;
  		}
  		h1 p {
  			top: -9px;
  		}
  		p.title {
  			@include fontSize(9);
- 			right: 118px;
  			bottom: -32px;
+ 			right: 96px;
  		}
  	}
  	 h3 {
@@ -860,11 +1022,65 @@ div.fa-bars {
 	 }
 }
 
+@media (max-width: 580px) {	
+ 	.container {
+ 		h1 {
+ 			padding: 26% 0 0 50%;
+ 		}
+ 		p.title {
+ 			right: 73px;
+ 		}
+ 	}
+ }	
+@media (max-width: 575px) {
+ 	.container {
+ 		h1 {
+ 			@include fontSize(21);
+ 			margin: 0;
+ 			padding: 55% 0 0 47%;
+ 		}
+ 		h1 p {
+ 			top: -9px;
+ 		}
+ 		p.title {
+ 			@include fontSize(9);
+ 			bottom: -32px;
+ 			right: 86px;
+ 		}
+ 	}
+ }
+ 	
+@media (max-width: 565px) {
+ 	.container {
+ 		p.title {
+ 			right: 81px;
+ 		}
+ 	}
+ }	
+
+@media (max-width: 545px) {
+	 .container {
+ 		p.title {
+ 			right: 71px;
+ 		}
+ 	}
+}
+@media (max-width: 530px) {
+	 .container {
+ 		p.title {
+ 			right: 65px;
+ 		}
+ 	}
+}
+@media (max-width: 520px) {
+	 .container {
+ 		p.title {
+ 			right: 60px;
+ 		}
+ 	}
+}
 @media (max-width: 514px) {
 	.container {
- 		h1 {
- 			margin: 48% 0 0 47%;
- 		}
  		p.title {
  			right: 57px;
  		}
@@ -933,11 +1149,34 @@ div.fa-bars {
 	 }
 }
 
+
+
+
 /* Landscape phones and down */
 @media (max-width: 480px) {
 	.container {
+		h1 {
+ 			@include fontSize(21);
+ 			margin: 0;
+ 			padding: 20% 0 0 47%;
+ 		}
  		p.title {
- 			right: 40px;
+ 			right: 47px;
+ 		}
+ 	}
+}
+
+
+/* Landscape phones and down */
+@media (max-width: 414px) {
+	.container {
+		h1 {
+ 			@include fontSize(21);
+ 			margin: 0;
+ 			padding: 55% 0 0 47%;
+ 		}
+ 		p.title {
+ 			right: 15px;
  		}
  	}
 }
@@ -947,7 +1186,7 @@ div.fa-bars {
  	.container {
  		h1 {
  			@include fontSize(21);
- 			margin: 65% 0 0 47%;
+ 			padding: 65% 0 0 45%;
  		}
  		h1 p {
  			top: -12px;
@@ -984,7 +1223,6 @@ div.fa-bars {
  	.resumeButton {
  		width: 41%;
  		@include fontSize(5);
- 		margin: 30px 0 0 37%;
  		p {
  			padding: 10px;
  		}
@@ -1040,6 +1278,7 @@ div.fa-bars {
 			@include fontSize(5);
 	 	}
 	 	form input[type=email], form input[type=text], form input[type=textarea] {
+			border-radius: none;
 			max-width: 85%;
 		}
 	 	h4 {
@@ -1094,7 +1333,6 @@ div.fa-bars {
  	.container {
 		h1 {
 			@include fontSize(19);
-			margin: 86% 0 0 42%;
 		}
 		p.title {
 			right: 6px;
