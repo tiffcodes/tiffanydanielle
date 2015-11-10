@@ -19,4 +19,13 @@ $(function() {
   $("a").on("click", function(){
     $("div.navigation").removeClass("flexplicit");
   });
+
+
+  //   true if current device is iPhone, iPad or iPod
+  if (is.ios() === true) {
+    $(".tiffany").removeClass('wow');
+    $(".projectInfo").removeClass('wow');
+    $(".projectPhoto").removeClass('wow');
+  }
+
 });

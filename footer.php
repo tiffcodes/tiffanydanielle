@@ -8,7 +8,7 @@
 					<a href='mailto:hello@tiffanydanielle.ca'>
 						<h4 class='email'>hello@tiffanydanielle.ca</h4>
 					</a>
-					<a href='#'>
+					<a href='tel:+14163898787'>
 						<h4>416-389-8787</h4>
 					</a>
 				</div> <!-- /contactInfo -->
@@ -70,6 +70,7 @@
 		 s.parentNode.insertBefore(g,s)}(document,"script"));
 		</script>
         <script src="<?php echo get_template_directory_uri(); ?>/js/wow.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/is_js/0.7.4/is.min.js"></script>
         <script>
         	new WOW().init();
         </script>

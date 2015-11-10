@@ -48,7 +48,7 @@ body {
 }
 
 .container2 {
-	max-width: 80%;
+	max-width: 90%;
 	margin: 0 auto;
 }
 
@@ -253,6 +253,7 @@ section.portfolio {
 					line-height: 1.6;
 					float: left;
 					font-weight: 800;
+					padding: 0 3px;
 				}
 			}	
 			.link {
@@ -294,6 +295,7 @@ section.portfolio {
 				}
 			}	
 			h4 {
+				letter-spacing: 2;
 				clear: both;
 				margin: 20px 0;
 				@include fontSize(20);
@@ -660,6 +662,7 @@ div.fa-bars {
 	}
 }
 
+
 @media (max-width: 780px) {
 	.container {
 		h1 p {
@@ -681,16 +684,16 @@ div.fa-bars {
 	form input {
 		margin: 4px 12px;
 	}
-}
-
-@media (max-width: 715px) {
 	section.portfolio .projects .container {
 	 	display: block;
 	 	padding: 10px;
+	 	.projectPhoto {
+	 		text-align: center;
+	 	}
 		.projectInfo {
-			padding-left: 20px;
+			padding-left: 70px;
 			p {
-				@include fontSize(7);
+				@include fontSize(10);
 			}
 			h4 {
 				@include fontSize(14);
@@ -703,7 +706,7 @@ div.fa-bars {
 				width: 50%;
 			}
 			.github {
-				padding: 9px;
+				padding: 13px;
 				@include fontSize(15);
 				width: 38%
 			}
@@ -711,6 +714,16 @@ div.fa-bars {
 	 }
 }
 
+@media (max-width: 715px) {
+	.container {
+		h1 p {
+			top: -18px;
+		}
+		p.title {
+			right: 44px;
+		}
+	}
+}
 
 /* Landscape phone to portrait tablet */
 @media (max-width: 690px) {
@@ -725,40 +738,6 @@ div.fa-bars {
 	.header .tiffany {
 		padding-top: 7px;
 	}	
-}
-
-
-@media (max-width: 625px) {
-
-}
-
-/* Landscape phones and down */
-@media (max-width: 480px) {
-}
-
-/* anything as high or higher than the iPhone 6 */
- @media (max-width:375px) {
- 	.hero {
- 		background-size: 600px;
- 		background-position: 42% 20%;
- 		height: 60vh;
- 	}
- 	.container {
- 		h1 {
- 			@include fontSize(21);
- 			margin: 71% 0 0 47%;
- 		}
- 		h1 p {
- 			top: -12px;
- 		}
- 		p.title {
- 			@include fontSize(8);
- 			right: 19px;
- 		}
- 	}
- 	.container1, .container {
-		max-width: 95%;
-	}
 	div.navigation {
 		display: none;
 		position: absolute;
@@ -777,6 +756,211 @@ div.fa-bars {
 		text-align: right;
 		color: lightgrey;
 	}
+}
+
+@media (max-width: 650px) {
+	.container {
+		h1 {
+			margin: 63% 0 0 61%;
+		}
+		p.title {
+			right: 21px;
+		}
+	}
+}
+
+@media (max-width: 625px) {
+	.container {
+		h1 {
+			@include fontSize(25);
+			margin: 91% 0 0 62%;
+		}
+		p.title {
+			right: 2px;
+		}
+	}
+}
+
+@media (max-width: 600px) {
+	.hero {
+ 		background-size: 600px;
+ 		background-position: 42% 20%;
+ 		height: 60vh;
+ 	} 	
+ 	.container {
+ 		h1 {
+ 			@include fontSize(21);
+ 			margin: 42% 0 0 43%;
+ 		}
+ 		h1 p {
+ 			top: -9px;
+ 		}
+ 		p.title {
+ 			@include fontSize(9);
+ 			right: 118px;
+ 			bottom: -32px;
+ 		}
+ 	}
+ 	 h3 {
+ 		@include fontSize(13);
+ 		padding: 20px 0;
+ 		margin: 30px 0 0 0;
+ 	}
+ 	.aboutMe {
+ 		.short {
+ 			@include fontSize(10);
+ 			width: 35%;
+ 		}
+ 		.long {
+ 			@include fontSize(10);
+ 			width: 60%;
+ 		}
+ 	}
+ 	.resumeButton {
+ 		width: 41%;
+ 		@include fontSize(7);
+ 		margin: 30px 0 0 37%;
+ 		p {
+ 			padding: 10px;
+ 		}
+ 	}
+ 	section.portfolio .projects .container {
+	 	display: block;
+	 	padding: 10px;
+	 	.projectPhoto {
+	 		text-align: center;
+	 	}
+		.projectInfo {
+			padding-left: 70px;
+			p {
+				@include fontSize(9);
+			}
+			h4 {
+				@include fontSize(12);
+			}
+			.techUsed {
+				margin: 0 0 55px;
+			}
+			.link a {
+				@include fontSize(7);
+				width: 50%;
+			}
+			.github {
+				padding: 12px;
+				@include fontSize(15);
+				width: 38%
+			}
+		}	
+	 }
+	 h4 {
+	 	@include fontSize(12);
+	 }
+	 .contactInfo {
+	 	padding-top: 6px;
+	 }
+}
+
+@media (max-width: 514px) {
+	.container {
+ 		h1 {
+ 			margin: 48% 0 0 47%;
+ 		}
+ 		p.title {
+ 			right: 57px;
+ 		}
+ 	}
+ 	.aboutMe {
+ 		.short {
+ 			@include fontSize(9);
+ 			width: 35%;
+ 		}
+ 		.long {
+ 			@include fontSize(9);
+ 			width: 60%;
+ 		}
+ 	}
+ 	.skill i {
+ 		margin: 8px 30px;
+ 	}
+ 	.resumeButton {
+ 		margin: 30px 0 0 38%;
+ 	}
+ 	section.portfolio .projects .container .projectInfo {
+ 		padding-left: 50px;
+ 	}
+	footer {
+	 	form input {
+	 		margin: 0 12px;
+	 		@include fontSize(8);
+	 	}
+	 	form input[type=submit] {
+			padding: 10px 30px;
+			line-height: 1.5;
+			@include fontSize(5);
+	 	}
+	 	form input[type=email], form input[type=text], form input[type=textarea] {
+			max-width: 85%;
+		}
+	 	h4 {
+	 		@include fontSize(8);
+	 		margin: 0 0 20px;
+	 	}
+	 	::-webkit-input-placeholder {
+			color: $grey;
+			line-height: 1.6;
+			@include fontSize(6);
+		}
+		:-moz-placeholder { /* Firefox 18- */
+			color: $grey;
+			line-height: 1.6;
+			@include fontSize(6);
+		}
+
+		::-moz-placeholder {  /* Firefox 19+ */
+			color: $grey;
+			line-height: 1.6;
+			@include fontSize(6);
+		}
+
+		:-ms-input-placeholder {  
+			color: $grey;
+			line-height: 1.6;
+			@include fontSize(6);
+		}
+		.social a {
+			@include fontSize(10);
+		}
+	 }
+}
+
+/* Landscape phones and down */
+@media (max-width: 480px) {
+	.container {
+ 		p.title {
+ 			right: 40px;
+ 		}
+ 	}
+}
+
+/* anything as high or higher than the iPhone 6 */
+ @media (max-width:375px) {
+ 	.container {
+ 		h1 {
+ 			@include fontSize(21);
+ 			margin: 65% 0 0 47%;
+ 		}
+ 		h1 p {
+ 			top: -12px;
+ 		}
+ 		p.title {
+ 			@include fontSize(8);
+ 			right: 19px;
+ 		}
+ 	}
+ 	.container1, .container {
+		max-width: 95%;
+	}
+	
  	div.header .tiffany {
  		width: 50%;
  		margin: 0;
@@ -793,7 +977,7 @@ div.fa-bars {
  			width: 35%;
  		}
  		.long {
- 			@include fontSize(7);
+ 			@include fontSize(9);
  			width: 60%;
  		}
  	}
@@ -818,9 +1002,10 @@ div.fa-bars {
 	 section.about {
 	 	margin: 0 0 50px 0;
 	 }
-	 section.portfolio .container {
+	 section.portfolio .projects .container {
 	 	display: block;
 	 	padding: 10px;
+	 	padding-left: 18px;
 		.projectInfo {
 			padding-left: 20px;
 			p {
@@ -843,9 +1028,11 @@ div.fa-bars {
 			}
 		}	
 	 }
+
 	 footer {
 	 	form input {
 	 		margin: 0 12px;
+	 		@include fontSize(8);
 	 	}
 	 	form input[type=submit] {
 			padding: 10px 30px;
