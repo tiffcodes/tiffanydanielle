@@ -41,11 +41,12 @@ get_header();  ?>
 	        		<?php the_field('long_about_me'); ?>
 	        	</div> <!-- /long -->
 	        </div> <!-- /aboutMe -->
-	  		<div class="resumeButton button">
-	  			<a href="#">
-	  				<p>View My Resume</p>
+
+	  			<a href="http://tiffanydanielle.ca/uploads/tiffanyDanielleResume.pdf" target="_blank">
+	  				<div class="resumeButton button">
+	  					<p>View My Resume</p>
+	  				</div> <!-- /resumeButton -->	
 	  			</a>
-	  		</div> <!-- /resumeButton -->
 
 			<div class='skill'>
 				<?php while(has_sub_field('skills')): ?>
@@ -67,7 +68,6 @@ get_header();  ?>
 <!-- 		<div class="container"> -->
 			<h3>Portfolio</h3>
 
-
 				<!-- Bringing in portfolio items  -->
 
 				<?php
@@ -76,6 +76,7 @@ get_header();  ?>
 						array(
 							'posts_per_page' => -1,
 							'post_type' => 'portfolio',
+							'orderby' => 'title',
 							'order' => 'ASC'
 							)
 					); ?>
@@ -99,12 +100,19 @@ get_header();  ?>
 											<h4><?php the_title(); ?></h4>
 											<p><?php the_field('long_description'); ?></p>
 										</div> <!-- /projectTitle -->
-										<div class="button link">
-											<p><a href='<?php the_field('live_link'); ?>'>View Live</a></p>
-										</div> <!-- /buttonLink -->
-										<div class="button github">
-											<a href='<?php the_field('github_link'); ?>'><i class='devicons devicons-github_badge'></i></a>
-										</div> <!-- /buttonLink -->
+										
+											<a href='<?php the_field('live_link'); ?>' target="_blank">
+												<div class="button link">
+													<p>View Live</p>
+												</div> <!-- /buttonLink -->
+											</a>
+										
+										
+											<a href='<?php the_field('github_link'); ?>' target="_blank">
+												<div class="button github">
+													<i class='devicons devicons-github_badge'></i>
+												</div> <!-- /buttonLink -->
+											</a>	
 
 									</div> <!-- /projectInfo -->
 								</div> <!-- /animated /fadeInLeft / wow /container -->
@@ -120,5 +128,20 @@ get_header();  ?>
 <?php get_footer(); ?>
 
 
+
+<!-- CREDITS:
+	Hand Drawn logo by Eunice Bae
+	Design from Themeforest It'sMe
+	Laptop Mockups from:
+		https://placeit.net/stages/laptop-mockup-of-a-macbook-air-over-transparent-background?f_devices=macbook
+	Icons from Font Awesome and Devicons:
+		https://fortawesome.github.io/Font-Awesome/icons/
+		http://vorillaz.github.io/devicons/#/main
+	Fonts Raleway regular and Raleway ExtraBold from Google 	Fonts
+	jQuery and wow.js libraries
+	Headshot from http://pamlau.com/
+	Special thanks to Hackeryou.com!! 
+
+ -->
 
 

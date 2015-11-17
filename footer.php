@@ -17,9 +17,9 @@
 			<!-- FORM SECTION -->
 
 		        <form action='http://formspree.io/hello@tiffanydanielle.ca' method='POST'>
-		        	<input type='text' placeholder='Name'>
-		        	<input type='email' placeholder='Email Address'>
-		        	<input type='textarea' placeholder='Message'>
+		        	<input type='text' placeholder='Name' name="name" class="" required>
+		        	<input type='email' placeholder='Email Address' name="_replyto" required>
+		        	<input type='textarea' placeholder='Message' name="message" required>
 		        	<input type="text" name="_gotcha" style="display:none" />
 		        	<input type="hidden" name="_next" value="http://tiffanydanielle.ca"/>
 		        	<div class="submit">
@@ -45,11 +45,11 @@
 						<?php while ($contactInfo->have_posts()) : $contactInfo->the_post(); ?>
 
 							<section id="<?php echo $post->post_name; ?>" class='wow animated fadeInUp'>
-								<a href='mailto: <?php the_field('email'); ?>'><i class='fa fa-envelope'></i></a>
-							    <a href='<?php the_field('phone'); ?>'><i class='fa fa-phone'></i></a>
-							   	<a href='<?php the_field('linkedin'); ?>'><i class='fa fa-linkedin'></i></a>
-							    <a href='<?php the_field('github'); ?>'><i class='fa fa-github'></i></a>
-							    <a href='<?php the_field('twitter'); ?>'><i class='fa fa-twitter'></i></a>
+								<a href='mailto: <?php the_field('email'); ?>' target="_blank"><i class='fa fa-envelope'></i></a>
+							    <a href='tel:<?php the_field('phone'); ?>' target="_blank"><i class='fa fa-phone'></i></a>
+							   	<a href='<?php the_field('linkedin'); ?>' target="_blank"><i class='fa fa-linkedin'></i></a>
+							    <a href='<?php the_field('github'); ?>' target="_blank"><i class='fa fa-github'></i></a>
+							    <a href='<?php the_field('twitter'); ?>' target="_blank"><i class='fa fa-twitter'></i></a>
 							</section>    
 						
 						<?php endwhile; ?>
@@ -74,6 +74,16 @@
         <script>
         	new WOW().init();
         </script>
+        <script>
+		  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+		  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+		  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+		  })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+		  ga('create', 'UA-70049230-1', 'auto');
+		  ga('send', 'pageview');
+
+		</script>
 
 		<?php wp_footer(); ?>
 	</body>

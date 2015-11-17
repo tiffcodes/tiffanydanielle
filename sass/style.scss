@@ -78,6 +78,10 @@ body {
 }
 
 
+input {
+	border-radius: 0;
+}
+
 // HEADER
 
 
@@ -194,9 +198,20 @@ h3 {
 	background-color: $orange;
 	width: 30%;
 	margin: 30px 0 0 31.5%;
+	border: 1px solid transparent;
+	padding: 15px;
+	transition: all 0.5s ease;
 	p {
-		padding: 15px;
+		padding: 0;
+		margin: 0;
 	}
+	&:hover {
+		border: 1px solid black;
+		background-color: transparent;
+		a, i {
+			color: black;
+		}
+	}	
 }		
 
 // SKILLS
@@ -231,7 +246,7 @@ h3 {
 
 section.portfolio {
 	background-color: $lightgrey;
-	padding: 1% 0 1%;
+	padding: 0;
 	.container {
 		color: white;
 		padding: 50px;
@@ -250,7 +265,7 @@ section.portfolio {
 			flex: 1 0 50%;
 			padding: 5%;
 			p {
-				@include fontSize(9.5);
+				@include fontSize(8);
 				margin: 0;
 				padding: 0;
 				line-height: 1.6;
@@ -270,7 +285,8 @@ section.portfolio {
 				float: left;
 				border: 1px solid $orange;
 				background-color: $orange;
-				padding: 15px;
+				padding: 17px;
+				transition: all 0.5s ease;
 				p {
 					text-align: center;
 				}
@@ -280,7 +296,7 @@ section.portfolio {
 				&:hover {
 					border: 1px solid black;
 					background-color: transparent;
-					a {
+					a, i {
 						color: black;
 					}
 				}
@@ -290,14 +306,15 @@ section.portfolio {
 				margin: 20px 0 20px 15px;
 				width: 20%;
 				border: 1px solid black;
-				color: $orange;
+				color: black;
 				padding: 12px;
 				@include fontSize(16);
 				background-color: transparent;
+				transition: all 0.5s ease;
 				&:hover {
 					background-color: $orange;
 					border: 1px solid transparent;
-					a {
+					a, i {
 						color: black;
 					}
 				}
@@ -326,6 +343,7 @@ section.portfolio .projects:nth-child(odd) {
 
 footer {
 	a {
+	transition: color 0.5s ease;
 		&:hover {
 			color: $orange;
 		}
@@ -390,9 +408,15 @@ form {
 		color: black;
 		padding: 15px 60px;
 		margin-top: 50px;
+		border: 1px solid transparent;
+		transition: all 0.5s ease;
 		&:hover {
-			color: white;
-		}
+			border: 1px solid black;
+			background-color: transparent;
+			a, i {
+				color: black;
+			}
+		}	
 	}
 }
 
@@ -647,6 +671,9 @@ div.fa-bars {
 	}
 	.container1 {
 		max-width: 60%;
+	}
+	.skill i {
+		margin: 8px 35px;
 	}
 }
 
@@ -1278,7 +1305,6 @@ div.fa-bars {
 			@include fontSize(5);
 	 	}
 	 	form input[type=email], form input[type=text], form input[type=textarea] {
-			border-radius: none;
 			max-width: 85%;
 		}
 	 	h4 {
